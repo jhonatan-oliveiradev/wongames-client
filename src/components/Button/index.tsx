@@ -1,13 +1,21 @@
-import React from 'react'
+import {
+  ElementType,
+  ReactNode,
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes
+} from 'react'
 import * as S from './styles'
 
+type ButtonTypes =
+  | AnchorHTMLAttributes<HTMLAnchorElement>
+  | ButtonHTMLAttributes<HTMLButtonElement>
+
 export type ButtonProps = {
-  children?: React.ReactNode
   size?: 'small' | 'medium' | 'large'
   fullWidth?: boolean
-  icon?: React.ReactNode
-  onClick?: () => (event: React.MouseEvent<HTMLButtonElement>) => void
-}
+  icon?: ReactNode
+  as?: ElementType
+} & ButtonTypes
 
 const Button = ({
   children,
