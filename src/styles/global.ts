@@ -47,6 +47,27 @@ const GlobalStyles = createGlobalStyle<GlobalStylesProps>`
   }
 
   ${({ theme, removeBg }) => css`
+    ::-webkit-scrollbar {
+      width: 0.6rem;
+      background-color: ${theme?.colors['gray'][9]};
+
+      border-radius: 0.8rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: ${theme?.colors['gray'][12]};
+      border-radius: 0.8rem;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: ${theme?.colors['gray'][9]};
+      border-radius: 0.8rem;
+
+      &:hover {
+        background-color: ${theme?.colors['gray'][12]};
+      }
+    }
+
     html {
       font-size: 62.5%; // 1rem = 10px
     }
