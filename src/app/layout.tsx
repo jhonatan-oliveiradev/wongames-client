@@ -9,7 +9,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'WonGames',
+  title: 'Won Games',
   description: 'The best Game Store in the world!'
 }
 
